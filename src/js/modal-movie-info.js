@@ -12,6 +12,7 @@ export async function onMovieCardClick(evt) {
 
     const movieId = await getMovieById(id); 
     const movieInfo = await movieId.data;
+    console.log('movieInfo', movieInfo)
     renderModalFilm({ movieInfo });
     activateModalBtns();
     console.log('rendered modal - new1')
