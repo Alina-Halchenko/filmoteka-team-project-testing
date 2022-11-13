@@ -11,19 +11,10 @@ export async function onMovieCardClick(evt) {
     document.querySelector('body').classList.add('modal-open');
 
     const movieId = await getMovieById(id); 
-    console.log('movieId', movieId)
     const movieInfo = await movieId.data;
-    console.log('movieInfo', movieInfo);
-
-    const backdrop = document.querySelector('.backdrop__movie-info');
-    // backdrop.innerHTML = modalFilm(film);
-    backdrop.classList.remove('is-hidden');
-
-    // renderModalFilm({ movieInfo });
-
-    console.log('rendered modal')
-    // activateModalBtns();
-    
+    renderModalFilm({ movieInfo });
+    activateModalBtns();
+    console.log('rendered modal - new1')
   } catch (error) {
     console.log(error);
   }
