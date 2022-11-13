@@ -14,7 +14,12 @@ export async function onMovieCardClick(evt) {
     console.log('movieId', movieId)
     const movieInfo = await movieId.data;
     console.log('movieInfo', movieInfo);
-    renderModalFilm({ movieInfo });
+
+    const backdrop = document.querySelector('.backdrop__movie-info');
+    // backdrop.innerHTML = modalFilm(film);
+    backdrop.classList.remove('is-hidden');
+
+    // renderModalFilm({ movieInfo });
 
     console.log('rendered modal')
     // activateModalBtns();

@@ -1,8 +1,7 @@
 import modalFilm from '../../templates/modalFilm.hbs';
 
 export function renderModalFilm(film) {
-  const backdrop = document.querySelector('.backdrop__movie-info');
-  backdrop.innerHTML = modalFilm(film);
+  
   const votes = document.querySelector('.modal__attributes-vote');
   const popularity = document.querySelector('.modal__attributes-text--popular');
   votes.textContent =
@@ -13,5 +12,5 @@ export function renderModalFilm(film) {
     popularity.textContent % 1 === 0
       ? popularity.textContent
       : (+popularity.textContent).toFixed(1);
-  backdrop.classList.remove('is-hidden');
+  
 }
